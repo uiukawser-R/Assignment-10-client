@@ -33,6 +33,7 @@ function NavigationBar() {
             {user && <Nav.Link className="text-white">
               <a className='' href="">
                 <img style={{ height: '50px', width: '50px' }} className=' text-center rounded-circle' src={user.photoURL} alt="" />
+                <span className='tooltip-text' id='left'>{user.displayName}</span>
               </a>
             </Nav.Link>}
            <Nav.Link>
