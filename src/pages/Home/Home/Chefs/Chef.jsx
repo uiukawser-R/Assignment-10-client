@@ -14,7 +14,8 @@ const Chef = ({ chef }) => {
                 <p>Year of exprience: {experience}</p>
                 <p>Number of recipes:{number_of_recipes} </p>
                 <p>Total likes: {number_of_likes}</p>
-                <Link to={`/recipe/${id}`}><Button variant="primary">View Recipe</Button></Link>
+                <Link to={`/recipe/${id}`}> <Button variant="warning">View Recipe</Button></Link>
+                
             </Card.Body>
         </Card>
     );

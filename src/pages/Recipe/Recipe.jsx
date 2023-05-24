@@ -6,10 +6,10 @@ import '@smastrom/react-rating/style.css'
 
 const Recipe = ({recipe}) => {
     console.log(recipe);
-    const {name,ingredients,cooking_method,rating}=recipe;
+    const {name,ingredients,cooking_method,rating,img}=recipe;
     return (
         <Card >
-        <Card.Img  variant="top" src="" />
+        <Card.Img  variant="top" src={img}/>
         
         <Card.Body>
             <Card.Title>{name}</Card.Title>
@@ -19,7 +19,7 @@ const Recipe = ({recipe}) => {
             <p>{cooking_method}</p>
             
             <h5>Rating: <small><Rating style={{ maxWidth: 250 }} value={rating} readOnly /></small>{rating}</h5>
-            <Link to=""><Button variant="primary">View Recipe</Button></Link>
+            <Link to=""> <Button variant="warning">View Recipe</Button></Link>
         </Card.Body>
     </Card>
     );

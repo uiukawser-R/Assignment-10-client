@@ -10,6 +10,7 @@ const Chefs = () => {
     },[])
     return (
         <div className="container">
+            <h1 className='text-center mb-5 fs-1 fw-bold text-primary'>Meet Our Chefs</h1>
             <div className='row'>
             {
                 chefs.map((c,i)=>(

@@ -8,7 +8,7 @@ const ViewRecipes = () => {
 
     const [chef, setChef] = useState([]);
     const [cData, setCdata] = useState([]);
-   
+
 
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const ViewRecipes = () => {
     console.log(chef);
     return (
         <Container>
-            <div className='mt-5 md:d-flex gap-5'>
+            <div className='mt-5 d-flex gap-5'>
                 <div>
                     <img src={cData.picture} alt="" />
                 </div>
