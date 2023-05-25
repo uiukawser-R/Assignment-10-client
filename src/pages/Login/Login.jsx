@@ -1,17 +1,23 @@
 import React, { useContext } from 'react';
-import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form, Spinner } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../../Provider/AuthProvider';
 import { getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
+import { FaGithubSquare, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-    const {signIn,googleProvider,githubProvider}=useContext(AuthContex);
+    const {signIn,googleProvider,githubProvider,loading}=useContext(AuthContex);
     const auth =getAuth(app);
 
     const navigate=useNavigate();
 
     const location=useLocation();
+
+    if(loading){
+        return <h1 className='text-center fs-1 fw-bold text-success'>L<Spinner animation="border" variant="danger" />ding.....</h1>
+    }
+
     // console.log('login page location',location);
     const from =location.state?.from?.pathname || '/'
 
@@ -93,9 +99,9 @@ const Login = () => {
                 <Form.Text className="text-danger"> </Form.Text>
             </Form>
             <div>
-                <Button className='mt-3 mb-3' onClick={handleSignInWithGoogle}>signin with google</Button>
+                <Button className='mt-3 mb-3' onClick={handleSignInWithGoogle}><FaGoogle /> signin with google</Button>
                 <br />
-                <Button onClick={handleSignInWithGithub}>signin with github</Button>
+                <Button onClick={handleSignInWithGithub}><FaGithubSquare></FaGithubSquare> signin with github</Button>
             </div>
 
         </Container>

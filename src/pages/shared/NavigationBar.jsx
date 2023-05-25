@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { AuthContex } from '../../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 function NavigationBar() {
   const { user,logOut } = useContext(AuthContex)
@@ -31,9 +33,11 @@ function NavigationBar() {
           </Nav>
           <Nav>
             {user && <Nav.Link className="text-white">
-              <a className='' href="">
+             <Tippy content={user.displayName}>
+             <a className='' href="">
                 <img style={{ height: '50px', width: '50px' }} className=' text-center rounded-circle' src={user.photoURL} alt="" />
               </a>
+             </Tippy>
             </Nav.Link>}
            <Nav.Link>
              {user? <Button onClick={handlelogOut} variant="warning">LogOut</Button>:
