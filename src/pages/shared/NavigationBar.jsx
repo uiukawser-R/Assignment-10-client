@@ -33,7 +33,7 @@ function NavigationBar() {
           </Nav>
           <Nav>
             {user && <Nav.Link className="text-white">
-             <Tippy content={user.displayName}>
+             <Tippy  content={user.displayName}>
              <a className='' href="">
                 <img style={{ height: '50px', width: '50px' }} className=' text-center rounded-circle' src={user.photoURL} alt="" />
               </a>
