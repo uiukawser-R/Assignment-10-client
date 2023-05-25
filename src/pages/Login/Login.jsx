@@ -101,7 +101,7 @@ const Login = () => {
             <div>
                 <Button className='mt-3 mb-3' onClick={handleSignInWithGoogle}><FaGoogle /> signin with google</Button>
                 <br />
-                <Button onClick={handleSignInWithGithub}><FaGithubSquare></FaGithubSquare> signin with github</Button>
+                <Button variant="dark" onClick={handleSignInWithGithub}><FaGithubSquare></FaGithubSquare> signin with github</Button>
             </div>
 
         </Container>
