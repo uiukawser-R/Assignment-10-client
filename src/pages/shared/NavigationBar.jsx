@@ -28,8 +28,8 @@ function NavigationBar() {
           <Nav className="mr-auto">
             <Nav.Link href="/" className="text-white">Home</Nav.Link>
             <Nav.Link href="/menu" className="text-white">Menu</Nav.Link>
-            <Nav.Link href="#services" className="text-white">Blog</Nav.Link>
-            <Nav.Link href="#contact" className="text-white">Contact</Nav.Link>
+            <Nav.Link href="/blog" className="text-white">Blog</Nav.Link>
+            <Nav.Link href="/contact" className="text-white">Contact</Nav.Link>
           </Nav>
           <Nav>
             {user && <Nav.Link className="text-white">
